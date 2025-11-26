@@ -29,7 +29,7 @@
   </div>
 
   <script>
-    fetch('datos.json')
+    fetch('datos.json?t=' + Date.now())
       .then(r => r.json())
       .then(d => {
         document.getElementById('titulo').textContent = 'Inmueble – ' + d.parcela;
@@ -44,4 +44,5 @@
       });
   </script>
 </body>
+
 </html>
